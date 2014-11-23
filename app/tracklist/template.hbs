@@ -1,0 +1,15 @@
+<h2>Tracklist</h2>
+
+{{#link-to "track/new"}}Add a new track {{/link-to}}
+
+<ul>
+    {{#each track in model}}
+      <li>
+        {{#link-to "track" track}}{{track.title}}{{/link-to}}
+      </li>
+    {{else}}
+      <li>No tracks</li>
+    {{/each}}
+</ul>
+
+{{outlet}}
